@@ -1,7 +1,12 @@
 import mongoose from 'mongoose';
-import Contact from '../../src/schemas/Contact';
+import { Readable } from 'stream';
 
-describe('MongoDB-Jest', () => {
+import ImportContactsService from '@services/importContactService';
+
+import Contact from '@schemas/Contact';
+import Tag from '@schemas/Tag';
+
+describe('Import', () => {
   beforeAll(async () => {
     if (!process.env.MONGO_URL) {
       throw new Error('MongoDB server not initialized');
@@ -20,6 +25,7 @@ describe('MongoDB-Jest', () => {
 
   beforeEach(async () => {
     await Contact.deleteMany({});
+    await Tag.deleteMany({});
   });
 
   it('should be able to create new contacts', async () => {
