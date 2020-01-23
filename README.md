@@ -19,3 +19,9 @@ Objetivo (MVP): Enviar emails para uma lista de forma fácil
 - Na importação, se a tag não existir ela deve ser criada;
 - Na importação, se o usuário já existir, só vamos veicula-lo com a tag;
 - A importação deve permitir múltiplas tags;
+
+## Desenvolvimento
+Lorem ipsum
+
+### ???
+Lorem ipsum
