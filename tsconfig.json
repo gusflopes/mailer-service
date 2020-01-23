@@ -20,5 +20,5 @@
       "@schemas/*": ["schemas/*"]
     }
   },
-  "include": ["src", "__tests__"]
+  "include": ["src"]
 }
