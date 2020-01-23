@@ -22,7 +22,8 @@ module.exports = {
   },
   plugins: [
     '@typescript-eslint',
-    'prettier'
+    'prettier',
+    'import-helpers',
   ],
   rules: {
     "prettier/prettier": "error",
@@ -36,7 +37,21 @@ module.exports = {
       {
         "ts": "never"
       }
-    ]
+    ],
+    "import-helpers/order-imports": [
+      "warn",
+      {
+        newlinesBetween: "always", // new line between groups
+        groups: [
+          // "/^react^/",
+          "module",
+          "/^~/",
+          // "/^@shared/",
+          ["parent", "sibling", "index"],
+        ],
+        alphabetize: { order: "asc", ignoreCase: true },
+      },
+  ],
   },
   "overrides": [
     {

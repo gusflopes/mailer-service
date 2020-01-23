@@ -1,8 +1,8 @@
-import { Readable } from 'stream';
 import csvParse from 'csv-parse';
+import { Readable } from 'stream';
 
-import Contact from '@schemas/Contact';
-import Tag from '@schemas/Tag';
+import Contact from '~/schemas/Contact';
+import Tag from '~/schemas/Tag';
 
 class ImportContactsService {
   async run(contactsFileStream: Readable, tags: string[]): Promise<void> {

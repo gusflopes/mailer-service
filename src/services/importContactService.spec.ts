@@ -1,10 +1,10 @@
 import mongoose from 'mongoose';
 import { Readable } from 'stream';
 
-import ImportContactsService from '@services/importContactService';
+import Contact from '~/schemas/Contact';
+import Tag from '~/schemas/Tag';
 
-import Contact from '@schemas/Contact';
-import Tag from '@schemas/Tag';
+import ImportContactsService from './importContactService';
 
 describe('Import', () => {
   beforeAll(async () => {
