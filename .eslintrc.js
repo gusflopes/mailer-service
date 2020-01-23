@@ -29,6 +29,7 @@ module.exports = {
     "class-methods-use-this": "off",
     "no-await-in-loop": "off",
     "import/prefer-default-export": "off",
+    "no-underscore-dangle": "off",
     "import/extensions": [
       "error",
       "ignorePackages",

@@ -1,6 +1,10 @@
 import mongoose, { Document, Schema } from 'mongoose';
 
-type Message = Document & {};
+type Message = Document & {
+  subject: string;
+  body: string;
+  tags: Array<string>; // ou array de objetos?
+};
 
 const MessageSchema = new Schema(
   {

@@ -23,14 +23,14 @@ describe('MongoDB-Jest', () => {
   });
 
   it('should be able to create new contacts', async () => {
-    await Contact.create({ email: 'gusflopes86@gmail.com' });
+    await Contact.create({ email: 'aleatorio@gmail.com' });
 
     const list = await Contact.find({});
 
     expect(list).toEqual(
       expect.arrayContaining([
         expect.objectContaining({
-          email: 'gusflopes86@gmail.com',
+          email: 'aleatorio@gmail.com',
         }),
       ])
     );
